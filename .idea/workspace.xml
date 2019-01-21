@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3df87961-7a38-46c4-9a09-a2d8ff954519" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trajectory_FFT.py" afterDir="false" />
-    </list>
+    <list default="true" id="3df87961-7a38-46c4-9a09-a2d8ff954519" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2668">
@@ -31,27 +26,6 @@
               <folding>
                 <element signature="e#174#184#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frequence_domain_process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-              <folding>
-                <element signature="e#162#178#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/trajectory_FFT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2306">
-              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -218,23 +192,22 @@
       <updated>1547737959558</updated>
       <workItem from="1547737961012" duration="989000" />
       <workItem from="1547913726986" duration="1111000" />
-      <workItem from="1548014924879" duration="15240000" />
+      <workItem from="1548014924879" duration="15466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17340000" />
+    <option name="totallyTimeSpent" value="17566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="878" height="1510" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.32762837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24938875" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32885087" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3345428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3345428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39985487" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -287,12 +260,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py">
+    <entry file="file://$PROJECT_DIR$/trajectory_FFT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2668">
-          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+        <state relative-caret-position="3016">
+          <caret line="104" column="18" lean-forward="true" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
           <folding>
-            <element signature="e#174#184#0" expanded="true" />
+            <element signature="e#160#170#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -307,10 +280,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trajectory_FFT.py">
+    <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2306">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="2668">
+          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+          <folding>
+            <element signature="e#174#184#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

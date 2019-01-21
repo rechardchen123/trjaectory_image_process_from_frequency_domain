@@ -21,6 +21,8 @@
 #$ -wd /home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image
 
 #7. run the application
+module unload compilers
+module load compilers/gnu/4.9.2
 module load python3/recommended
-module load opencv/3.4.1/gnu-4.9.2
+module load opencv/3.4.1
 ./frequency_domain_process_hpc.py
