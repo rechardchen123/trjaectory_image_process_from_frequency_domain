@@ -7,8 +7,9 @@
 import cv2
 import numpy as np
 import glob
+import matplotlib as mpl 
+mpl.use('Agg')
 import matplotlib.pyplot as plt
-#matplotlib.use('Agg')
 import os
 '''
 The image processing for the CNN has three steps.
@@ -79,7 +80,7 @@ for image in trajectory_image:
     image_name1 = os.path.splitext(image_name)[0]
     image1 = cv2.imread(image, 0)  # use the gray mode to read the images
     high_pass_filter_image = high_pass_filter(image1)
-    # plt.imshow(high_pass_filter_image)
+    plt.imshow(high_pass_filter_image)
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
@@ -89,7 +90,7 @@ for image in trajectory_image:
     plt.close('all')
     # plt.show()
     low_pass_filter_image = low_pass_filter(image1)
-    # plt.imshow(low_pass_filter_image)
+    plt.imshow(low_pass_filter_image)
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
@@ -98,7 +99,7 @@ for image in trajectory_image:
             image_name1))
     plt.close('all')
     band_pass_filter_image = band_pass_filter(image1)
-    # plt.imshow(low_pass_filter_image)
+    plt.imshow(low_pass_filter_image)
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
