@@ -8,6 +8,7 @@ import cv2
 import numpy as np
 import glob
 import matplotlib.pyplot as plt
+#matplotlib.use('Agg')
 import os
 '''
 The image processing for the CNN has three steps.
@@ -71,34 +72,37 @@ def band_pass_filter(img):
 
 # read the image feed
 trajectory_image = glob.glob(
-    '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image\AIS_trajectory_image_clip_labels\*.jpg')
+    '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image/AIS_trajectory_image_clip_labels/*.jpg')
 for image in trajectory_image:
     # using the high pass filter to get the image
     image_name = os.path.basename(image)
     image_name1 = os.path.splitext(image_name)[0]
     image1 = cv2.imread(image, 0)  # use the gray mode to read the images
     high_pass_filter_image = high_pass_filter(image1)
-    plt.imshow(high_pass_filter_image)
+    # plt.imshow(high_pass_filter_image)
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
     plt.savefig(
-        '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image/High_filter_image\%s.jpg' % (
+        '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image/High_filter_image/%s.jpg' % (
             image_name1))
+    plt.close('all')
     # plt.show()
     low_pass_filter_image = low_pass_filter(image1)
-    plt.imshow(low_pass_filter_image)
+    # plt.imshow(low_pass_filter_image)
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
     plt.savefig(
-        '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image\Low_filter_image\%s.jpg' % (
+        '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image/Low_filter_image/%s.jpg' % (
             image_name1))
+    plt.close('all')
     band_pass_filter_image = band_pass_filter(image1)
-    plt.imshow(low_pass_filter_image)
+    # plt.imshow(low_pass_filter_image)
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
     plt.savefig(
-        '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image\Band_filter_image\%s.jpg' % (
+        '/home/ucesxc0/Scratch/output/frequency_domain_processing_trajectory_image/Band_filter_image/%s.jpg' % (
             image_name1))
+    plt.close('all')
