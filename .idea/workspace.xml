@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3df87961-7a38-46c4-9a09-a2d8ff954519" name="Default Changelist" comment="" />
+    <list default="true" id="3df87961-7a38-46c4-9a09-a2d8ff954519" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/test_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +15,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$clip_image.coverage" NAME="clip_image Coverage Results" MODIFIED="1548168976012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$trajectory_sampling.coverage" NAME="trajectory sampling Coverage Results" MODIFIED="1547738919668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$label_data_tfrecord.coverage" NAME="label_data_tfrecord Coverage Results" MODIFIED="1548169284803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$frequence_domain_process.coverage" NAME="frequence_domain_process Coverage Results" MODIFIED="1548078573974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$trajectory_FFT.coverage" NAME="trajectory_FFT Coverage Results" MODIFIED="1548081866820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -19,13 +27,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py">
+        <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2668">
-              <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+            <state relative-caret-position="696">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
-                <element signature="e#174#184#0" expanded="true" />
+                <element signature="e#160#183#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/test_network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -43,7 +69,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/trajectory sampling.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/frequence_domain_process.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/trajectory_FFT.py" root0="SKIP_INSPECTION" />
@@ -58,14 +87,19 @@
         <option value="$PROJECT_DIR$/trajectory_FFT.py" />
         <option value="$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.sh" />
         <option value="$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/test_network.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" />
+        <option value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2051" />
-    <option name="y" value="283" />
+    <option name="x" value="2050" />
+    <option name="y" value="282" />
     <option name="width" value="1200" />
-    <option name="height" value="638" />
+    <option name="height" value="639" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -80,6 +114,11 @@
               <item name="trjaectory_image_process_from_frequency_domain" type="b2602c69:ProjectViewProjectNode" />
               <item name="trjaectory_image_process_from_frequency_domain" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="trjaectory_image_process_from_frequency_domain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trjaectory_image_process_from_frequency_domain" type="462c0819:PsiDirectoryNode" />
+              <item name="deep_feature_extraction_from_trajectory_image" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -88,7 +127,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -105,7 +144,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trajectory_FFT">
+  <component name="RunManager" selected="Python.label_data_tfrecord">
+    <configuration name="clip_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trjaectory_image_process_from_frequency_domain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="frequence_domain_process" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="trjaectory_image_process_from_frequency_domain" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,6 +181,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frequence_domain_process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="label_data_tfrecord" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trjaectory_image_process_from_frequency_domain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,6 +257,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.label_data_tfrecord" />
+        <item itemvalue="Python.clip_image" />
         <item itemvalue="Python.trajectory_FFT" />
         <item itemvalue="Python.frequence_domain_process" />
         <item itemvalue="Python.trajectory sampling" />
@@ -193,11 +278,12 @@
       <workItem from="1547737961012" duration="989000" />
       <workItem from="1547913726986" duration="1111000" />
       <workItem from="1548014924879" duration="15466000" />
+      <workItem from="1548157646663" duration="12964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17566000" />
+    <option name="totallyTimeSpent" value="30530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="878" height="1510" extended-state="6" />
@@ -207,7 +293,7 @@
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32885087" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3345428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35195935" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39985487" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -250,9 +336,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process.py" />
     <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -280,12 +364,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#157#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2320">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#166#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2668">
-          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+        <state relative-caret-position="812">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding>
             <element signature="e#174#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/test_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#160#183#0" expanded="true" />
           </folding>
         </state>
       </provider>
