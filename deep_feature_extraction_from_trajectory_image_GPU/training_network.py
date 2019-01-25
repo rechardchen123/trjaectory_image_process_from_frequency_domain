@@ -11,10 +11,22 @@ import glob
 
 BATCH_SIZE = 8
 LEARNING_RATE = 0.001
-filenames = glob.glob(
-    r'C:\Users\LPT-ucesxc0\AIS-Data\Frequency_domain_processing_trajectory_image\High_filter_image_data_and_label\train.tfrecords')
-logs_train_dir = r'C:\Users\LPT-ucesxc0\AIS-Data\Frequency_domain_processing_trajectory_image\High_filter_image_data_and_label'
 TRAINING_STEP = 15000
+# filenames = glob.glob(
+#     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Raw_image/train.tfrecords')
+# logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Raw_image'
+
+filenames = glob.glob(
+    '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image/train.tfrecords')
+logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image'
+
+# filenames = glob.glob(
+#     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Low_filter_image/train.tfrecords')
+# logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Low_filter_image'
+#
+# filenames = glob.glob(
+#     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Band_filter_image/train.tfrecords')
+# logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Band_filter_image'
 
 
 def read_and_decode(record):
@@ -52,7 +64,8 @@ train_evaluation = CNN_structure.evaluation(
 # read the data and get the data pipeline
 train_dataset = tf.data.TFRecordDataset(filenames)
 train_dataset = train_dataset.map(read_and_decode)
-train_dataset = train_dataset.batch(batch_size=BATCH_SIZE, drop_remainder=True)
+train_dataset = train_dataset.apply(
+        tf.contrib.data.batch_and_drop_remainder(batch_size=BATCH_SIZE))
 train_iter = train_dataset.make_one_shot_iterator()
 train_next_element = train_iter.get_next()
 
@@ -70,7 +83,7 @@ with tf.Session() as sess:
                                            input_y3:label3})
         if step % 10 == 0:
             print('train cost',np.around(tra_cost,3))
-            print('train evaluation1', np.around(tra_evaluation1,3))
+            print('train evaluation1', np.around(tra_evaluation1, 3))
             print('train evaluation2', np.around(tra_evaluation2, 3))
             print('train evaluation3', np.around(tra_evaluation3, 3))
             print('train accuracy', tra_accuracy)

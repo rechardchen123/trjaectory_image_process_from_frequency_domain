@@ -133,9 +133,9 @@ def evaluation(y_conv, input_y1, input_y2, input_y3, learning_rate):
     y2 = tf.nn.softmax(y_conv)
     y3 = tf.nn.softmax(y_conv)
 
-    cross_entropy1 = tf.nn.softmax_cross_entropy_with_logits(labels=input_y1, logits=y1)
-    cross_entropy2 = tf.nn.softmax_cross_entropy_with_logits(labels=input_y2, logits=y2)
-    cross_entropy3 = tf.nn.softmax_cross_entropy_with_logits(labels=input_y3, logits=y3)
+    cross_entropy1 = tf.nn.sigmoid_cross_entropy_with_logits(labels=input_y1, logits=y1)
+    cross_entropy2 = tf.nn.sigmoid_cross_entropy_with_logits(labels=input_y2, logits=y2)
+    cross_entropy3 = tf.nn.sigmoid_cross_entropy_with_logits(labels=input_y3, logits=y3)
 
     cost1 = tf.reduce_mean(cross_entropy1)
     cost2 = tf.reduce_mean(cross_entropy2)
