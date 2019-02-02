@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3df87961-7a38-46c4-9a09-a2d8ff954519" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/trjaectory_image_process_from_frequency_domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trjaectory_image_process_from_frequency_domain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,23 +18,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$training_network.coverage" NAME="training_network Coverage Results" MODIFIED="1548263044490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$first_read_and_process_data.coverage" NAME="first_read_and_process_data Coverage Results" MODIFIED="1548360182401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$clip_image.coverage" NAME="clip_image Coverage Results" MODIFIED="1548168976012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image" />
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$fourth_groupby_mmsi_day.coverage" NAME="fourth_groupby_mmsi_day Coverage Results" MODIFIED="1548409021810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$third_delete_small_csv_file.coverage" NAME="third_delete_small_csv_file Coverage Results" MODIFIED="1548424368619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$delta_time_delta_speed_split_per_day.coverage" NAME="delta-time-delta-speed-split-per-day Coverage Results" MODIFIED="1548410769868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$trajectory_sampling.coverage" NAME="trajectory sampling Coverage Results" MODIFIED="1547738919668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$trajectory_generation_local.coverage" NAME="trajectory_generation_local Coverage Results" MODIFIED="1548432723119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../image_based_trajectory_CNN" />
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$label_data_tfrecord.coverage" NAME="label_data_tfrecord Coverage Results" MODIFIED="1548169284803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$frequence_domain_process.coverage" NAME="frequence_domain_process Coverage Results" MODIFIED="1548078573974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$trajectory_FFT.coverage" NAME="trajectory_FFT Coverage Results" MODIFIED="1548081866820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$third_delete_small_csv_file.coverage" NAME="third_delete_small_csv_file Coverage Results" MODIFIED="1548424368619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$fourth_groupby_mmsi_day.coverage" NAME="fourth_groupby_mmsi_day Coverage Results" MODIFIED="1548409021810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$trajectory_sampling.coverage" NAME="trajectory sampling Coverage Results" MODIFIED="1547738919668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$first_read_and_process_data.coverage" NAME="first_read_and_process_data Coverage Results" MODIFIED="1548360182401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_ais_data" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$training_network.coverage" NAME="training_network Coverage Results" MODIFIED="1548263044490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$clip_image.coverage" NAME="clip_image Coverage Results" MODIFIED="1548544358716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image" />
+    <SUITE FILE_PATH="coverage/trjaectory_image_process_from_frequency_domain$label_data_tfrecord.coverage" NAME="label_data_tfrecord Coverage Results" MODIFIED="1548520999268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="trjaectory_image_process_from_frequency_domain" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#160#183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,32 +60,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-05.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/trajectory sampling.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/frequence_domain_process.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/process_ais_data/first_read_and_process_data.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/process_ais_data/fourth_groupby_mmsi_day.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/process_ais_data/ais_trajectory.sh" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/process_ais_data/third_delete_small_csv_file.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-03.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-04.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-02.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-01.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/AIS-Data/trajectory_image_generation.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.sh" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/trajectory_generation_local.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/trajectory_FFT.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/process_ais_data/split_abnormal_ais_per_day.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/process_ais_data/delta-time-delta-speed-split-per-day.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/process_ais_data/first_read_and_process_data.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/process_ais_data/third_delete_small_csv_file.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/trajectory sampling.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/trajectory_FFT.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/frequence_domain_process.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/process_ais_data/ais_trajectory.sh" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,12 +91,9 @@
         <option value="$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.sh" />
         <option value="$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py" />
         <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/test_network.py" />
-        <option value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
-        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" />
         <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py" />
         <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/CNN_structure.py" />
         <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh" />
-        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py" />
         <option value="$PROJECT_DIR$/process_ais_data/first_read_and_process data.py" />
         <option value="$PROJECT_DIR$/process_ais_data/ais_trajectory.sh" />
         <option value="$PROJECT_DIR$/process_ais_data/first_read_and_process_data.py" />
@@ -102,20 +110,26 @@
         <option value="$USER_HOME$/AIS-Data/trajectory_image_generation-03.py" />
         <option value="$USER_HOME$/AIS-Data/trajectory_image_generation-04.py" />
         <option value="$USER_HOME$/AIS-Data/trajectory_image_generation-05.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.sh" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" />
+        <option value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
+        <option value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2057" />
-    <option name="y" value="283" />
-    <option name="width" value="1000" />
-    <option name="height" value="533" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,24 +137,18 @@
               <item name="trjaectory_image_process_from_frequency_domain" type="b2602c69:ProjectViewProjectNode" />
               <item name="trjaectory_image_process_from_frequency_domain" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="trjaectory_image_process_from_frequency_domain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trjaectory_image_process_from_frequency_domain" type="462c0819:PsiDirectoryNode" />
-              <item name="trajectory_generation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -154,7 +162,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trajectory_generation_local">
+  <component name="RunManager" selected="Python.clip_image">
+    <configuration name="clip_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trjaectory_image_process_from_frequency_domain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="delta-time-delta-speed-split-per-day" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="trjaectory_image_process_from_frequency_domain" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -177,7 +207,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="first_read_and_process_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="label_data_tfrecord" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="trjaectory_image_process_from_frequency_domain" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -185,34 +215,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/process_ais_data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/process_ais_data/first_read_and_process_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="fourth_groupby_mmsi_day" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="trjaectory_image_process_from_frequency_domain" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/process_ais_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/process_ais_data/fourth_groupby_mmsi_day.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -267,11 +275,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.clip_image" />
+        <item itemvalue="Python.label_data_tfrecord" />
         <item itemvalue="Python.trajectory_generation_local" />
         <item itemvalue="Python.third_delete_small_csv_file" />
         <item itemvalue="Python.delta-time-delta-speed-split-per-day" />
-        <item itemvalue="Python.fourth_groupby_mmsi_day" />
-        <item itemvalue="Python.first_read_and_process_data" />
       </list>
     </recent_temporary>
   </component>
@@ -293,21 +301,26 @@
       <workItem from="1548340793071" duration="8339000" />
       <workItem from="1548349527644" duration="386000" />
       <workItem from="1548359830344" duration="20789000" />
+      <workItem from="1548514002644" duration="5780000" />
+      <workItem from="1548542980659" duration="1787000" />
+      <workItem from="1548555121263" duration="51000" />
+      <workItem from="1549077286243" duration="682000" />
+      <workItem from="1549133403626" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77183000" />
+    <option name="totallyTimeSpent" value="85498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="-7" width="878" height="1510" extended-state="6" />
+    <frame x="0" y="32" width="1853" height="1048" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3361858" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24938875" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.32885087" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.24938875" />
+      <window_info id="Favorites" order="1" side_tool="true" weight="0.32885087" />
+      <window_info content_ui="combo" id="Project" order="2" weight="0.15839376" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3896952" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.67673177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5994195" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,16 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#157#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frequency_domain_process_HPC/frequency_domain_process_hpc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
@@ -406,37 +409,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2320">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="e#166#189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/ops/confusion_matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="1347" selection-start-line="1347" selection-end-line="1347" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1630" selection-start-line="1630" selection-end-line="1630" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/ops/confusion_matrix.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/client/session.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/framework/ops.py" />
     <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/test_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -444,27 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/training_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1943">
           <caret line="67" column="59" lean-forward="true" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
-          <folding>
-            <element signature="e#160#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
             <element signature="e#160#183#0" expanded="true" />
           </folding>
@@ -488,30 +446,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process_ais_data/first_read_and_process data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#157#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process_ais_data/second_clean_and_group_the_data_by_mmsi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="32" column="56" lean-forward="true" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/pandas/core/series.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="3191" selection-start-line="3191" selection-end-line="3191" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/process_ais_data/first_read_and_process data.py" />
+    <entry file="file://$PROJECT_DIR$/process_ais_data/second_clean_and_group_the_data_by_mmsi.py" />
+    <entry file="file://C:/Anaconda3/Lib/site-packages/pandas/core/series.py" />
     <entry file="file://$PROJECT_DIR$/process_ais_data/first_read_and_process_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -546,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process_ais_data/third_delete_small_csv_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -563,13 +493,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/trajectory_generation_local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/trajectory_generation_local.py" />
     <entry file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
@@ -580,45 +504,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation.py">
+    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation.py" />
+    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-01.py" />
+    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-02.py" />
+    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-03.py" />
+    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-04.py" />
+    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-05.py" />
+    <entry file="file://$PROJECT_DIR$/trajectory_generation/trajectory_image_generation.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2059">
-          <caret line="78" column="44" lean-forward="true" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+        <state>
+          <caret selection-end-line="28" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-01.py">
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
-          <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-02.py">
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="232">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-03.py">
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/label_data_tfrecord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-899">
-          <caret line="33" column="49" lean-forward="true" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+        <state relative-caret-position="203">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-04.py">
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image/label_data_tfrecord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="112">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#166#189#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AIS-Data/trajectory_image_generation-05.py">
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/CNN_structure.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../image_based_trajectory_CNN/clip_image/clip_image.py" />
+    <entry file="file://$PROJECT_DIR$/deep_feature_extraction_from_trajectory_image_GPU/training_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="350">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#160#183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -10,9 +10,9 @@ import numpy as np
 from PIL import Image
 
 IMAGE_PATH = \
-    r'C:\Users\LPT-ucesxc0\AIS-Data\Frequency_domain_processing_trajectory_image\Low_filter_image_data_and_label\Low_filter_image'
+    r'C:\Users\LPT-ucesxc0\AIS-Data\image_combined_tianjin_danish0901'
 IMAGE_LABEL_PATH = \
-    r'C:\Users\LPT-ucesxc0\AIS-Data\Frequency_domain_processing_trajectory_image\Low_filter_image_data_and_label'
+    r'C:\Users\LPT-ucesxc0\AIS-Data'
 
 train_label = []
 test_label = []
@@ -80,6 +80,6 @@ def image_to_tfrecords(list, tf_record_path):
 
 
 image_to_tfrecords(train_label,
-                   r'C:\Users\LPT-ucesxc0\AIS-Data\Frequency_domain_processing_trajectory_image\Low_filter_image_data_and_label\train.tfrecords')
+                   r'C:\Users\LPT-ucesxc0\AIS-Data\tfrecords\train.tfrecords')
 image_to_tfrecords(test_label,
-                   r'C:\Users\LPT-ucesxc0\AIS-Data\Frequency_domain_processing_trajectory_image\Low_filter_image_data_and_label\test.tfrecords')
+                   r'C:\Users\LPT-ucesxc0\AIS-Data\tfrecords\test.tfrecords')
