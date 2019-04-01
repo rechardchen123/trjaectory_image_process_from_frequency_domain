@@ -49,25 +49,3 @@ for file in trajectory_ais_data:
     maximum_value_latitude = new_sample_data.iloc[:, 2].max()
     minimum_value_longitude = new_sample_data.iloc[:, 1].min()
     minimum_value_latitude = new_sample_data.iloc[:, 2].min()
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

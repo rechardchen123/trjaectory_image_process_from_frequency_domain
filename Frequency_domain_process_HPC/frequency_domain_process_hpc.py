@@ -8,9 +8,10 @@ import cv2
 import numpy as np
 import glob
 import matplotlib as mpl 
-mpl.use('Agg')
 import matplotlib.pyplot as plt
 import os
+mpl.use('Agg')
+
 '''
 The image processing for the CNN has three steps.
 First, get the raw images

@@ -7,25 +7,24 @@
 import tensorflow as tf
 import numpy as np
 
-
-def weight_variable(shape):
+def weight_variable(shape,f_name):
     '''
     The weight variables
     :param shape:
     :return:
     '''
     initial = tf.truncated_normal(shape, stddev=0.1)
-    return tf.Variable(initial)
+    return tf.Variable(initial,name=f_name)
 
 
-def bias_variable(shape):
+def bias_variable(shape,f_name):
     '''
     The bias variables
     :param shape:
     :return:
     '''
     initial = tf.constant(0.1, shape=shape)
-    return tf.Variable(initial)
+    return tf.Variable(initial,name=f_name)
 
 
 def conv2d(x, w):
@@ -66,44 +65,50 @@ def build_convolution_layer(input_x,batch_size):
     :return:
     '''
     # 1.convolutuon1 -> pooling layer 1
-    w_conv1 = weight_variable([5, 5, 3, 64])
-    b_conv1 = bias_variable([64])
-
-    h_conv1 = tf.nn.relu(conv2d(input_x, w_conv1) + b_conv1)  # output[-1,360,490,64]
-
-    h_pool1 = max_pooling(h_conv1)  # output[-1,180,245,64]
+    with tf.name_scope('Conv1'):
+        w_conv1 = weight_variable([5, 5, 3, 64],'W_conv1')
+        b_conv1 = bias_variable([64], 'b_conv1')
+        with tf.name_scope('h_conv1'):
+            h_conv1 = tf.nn.relu(conv2d(input_x, w_conv1) + b_conv1)  # output[-1,360,490,64]
+    with tf.name_scope('pool1'):
+        h_pool1 = max_pooling(h_conv1)  # output[-1,180,245,64]
 
     # 2.convolution2 -> convolution3
-    w_conv2 = weight_variable([5, 5, 64, 64])
-    b_conv2 = bias_variable([64])
-
-    h_conv2 = tf.nn.relu(conv2d(h_pool1, w_conv2) + b_conv2)  # output[-1,180,245,64]
-
-    w_conv3 = weight_variable([5, 5, 64, 16])
-    b_conv3 = bias_variable([16])
-
-    h_conv3 = tf.nn.relu(conv2d(h_conv2, w_conv3) + b_conv3)  # output[-1,180,245,16]
+    with tf.name_scope('Conv2'):
+        w_conv2 = weight_variable([5, 5, 64, 64],'W_conv2')
+        b_conv2 = bias_variable([64],'b_conv2')
+        with tf.name_scope('h_conv2'):
+            h_conv2 = tf.nn.relu(conv2d(h_pool1, w_conv2) + b_conv2)  # output[-1,180,245,64]
+    with tf.name_scope('Conv3'):
+        w_conv3 = weight_variable([5, 5, 64, 16],'W_conv3')
+        b_conv3 = bias_variable([16],'b_conv3')
+        with tf.name_scope('h_conv3'):
+            h_conv3 = tf.nn.relu(conv2d(h_conv2, w_conv3) + b_conv3)  # output[-1,180,245,16]
 
     # 3.convolutuon3 -> pooling layer 2 -> pooling layer 3
-    h_pool2 = max_pooling(h_conv3)  # output[-1,90,123,16]
-
-    h_pool3 = max_pooling(h_pool2)  # output[-1,45,62,16]
+    with tf.name_scope('pool2'):
+        h_pool2 = max_pooling(h_conv3)  # output[-1,90,123,16]
+    with tf.name_scope('pool3'):
+        h_pool3 = max_pooling(h_pool2)  # output[-1,45,62,16]
 
     # 4. pooling layer 3 -> convolution4 -> pooling layer 4
-    w_conv4 = weight_variable([5, 5, 16, 3])
-    b_conv4 = bias_variable([3])
-
-    h_conv4 = tf.nn.relu(conv2d(h_pool3, w_conv4) + b_conv4)  # output [-1,45,62,3]
-
-    h_pool4 = max_pooling_last(h_conv4)  # output [-1,12,16,3]
+    with tf.name_scope('Conv4'):
+        w_conv4 = weight_variable([5, 5, 16, 3],'W_conv4')
+        b_conv4 = bias_variable([3],'b_conv4')
+        with tf.name_scope('h_conv4'):
+            h_conv4 = tf.nn.relu(conv2d(h_pool3, w_conv4) + b_conv4)  # output [-1,45,62,3]
+    with tf.name_scope('pool4'):
+        h_pool4 = max_pooling_last(h_conv4)  # output [-1,12,16,3]
 
     # pooling layer 4 -> global average max_pooling
-    nt_hpool5 = avg_pool(h_pool4)
+    with tf.name_scope('nt_hppol5'):
+        nt_hpool5 = avg_pool(h_pool4)
 
     # global average max_pooling -> softmax layer
-    nt_hpool5_flat = tf.reshape(nt_hpool5, [-1,3])
-
-    y_conv = tf.nn.softmax(nt_hpool5_flat)
+        with tf.name_scope('flatting'):
+            nt_hpool5_flat = tf.reshape(nt_hpool5, [-1,3])
+    with tf.name_scope('softmax'):
+        y_conv = tf.nn.softmax(nt_hpool5_flat)
     return y_conv
 
 
@@ -132,19 +137,22 @@ def evaluation(y_conv, input_y1, input_y2, input_y3, learning_rate):
     y1 = tf.nn.softmax(y_conv)
     y2 = tf.nn.softmax(y_conv)
     y3 = tf.nn.softmax(y_conv)
+    with tf.name_scope('Corss_entropy'):
+        cross_entropy1 = tf.nn.sigmoid_cross_entropy_with_logits(labels=input_y1, logits=y1,name='loss1')
+        cross_entropy2 = tf.nn.sigmoid_cross_entropy_with_logits(labels=input_y2, logits=y2,name='loss2')
+        cross_entropy3 = tf.nn.sigmoid_cross_entropy_with_logits(labels=input_y3, logits=y3,name='loss3')
+        cost1 = tf.reduce_mean(cross_entropy1)
+        cost2 = tf.reduce_mean(cross_entropy2)
+        cost3 = tf.reduce_mean(cross_entropy3)
+        cost = [cost1, cost2, cost3]
+        tf.summary.scalar('cross_entropy1', cost1)
+        tf.summary.scalar('cross_entropy2', cost2)
+        tf.summary.scalar('cross_entropy3', cost3)
 
-    cross_entropy1 = tf.nn.softmax_cross_entropy_with_logits(labels=input_y1, logits=y1)
-    cross_entropy2 = tf.nn.softmax_cross_entropy_with_logits(labels=input_y2, logits=y2)
-    cross_entropy3 = tf.nn.softmax_cross_entropy_with_logits(labels=input_y3, logits=y3)
-
-    cost1 = tf.reduce_mean(cross_entropy1)
-    cost2 = tf.reduce_mean(cross_entropy2)
-    cost3 = tf.reduce_mean(cross_entropy3)
-    cost = [cost1, cost2, cost3]
-
-    train1 = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost1)
-    train2 = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost2)
-    train3 = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost3)
+    with tf.name_scope('Multi_Train_Step'):
+        train1 = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost1,name='train1')
+        train2 = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost2,name='train2')
+        train3 = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost3,name='train3')
 
     correct_predict1 = tf.equal(tf.argmax(input_y1), tf.argmax(y1))
     correct_predict2 = tf.equal(tf.argmax(input_y2), tf.argmax(y2))
@@ -164,6 +172,9 @@ def evaluation(y_conv, input_y1, input_y2, input_y3, learning_rate):
     precision3, recall3, F13 = evaluation_matrix(accuracy3, input_y3)
     evaluation3 = [precision3, recall3, F13]
     accuracy = [accuracy1, accuracy2, accuracy3]
+    tf.summary.scalar('accuracy1',accuracy1)
+    tf.summary.scalar('accuracy2',accuracy2)
+    tf.summary.scalar('accuracy3',accuracy3)
     # caluclate the confusion matrixes
     # con1 = tf.confusion_matrix(labels=input_y1, predictions=accuracy1)
     # con2 = tf.confusion_matrix(labels=input_y2, predictions=accuracy2)

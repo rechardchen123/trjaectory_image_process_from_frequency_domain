@@ -8,17 +8,20 @@ import tensorflow as tf
 import numpy as np
 import CNN_structure
 import glob
+import os
 
 BATCH_SIZE = 8
 LEARNING_RATE = 0.001
-TRAINING_STEP = 15000
-# filenames = glob.glob(
-#     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Raw_image/train.tfrecords')
-# logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Raw_image'
-
+MAX_STEPS = 20000
 filenames = glob.glob(
-    '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image/train.tfrecords')
-logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image'
+    '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/train.tfrecords')
+logs_train_dir = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/parameters'
+graph_path = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/graph'
+model_cnn_save_path = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/parameters/'
+
+# filenames = glob.glob(
+#     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image/train.tfrecords')
+# logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image'
 
 # filenames = glob.glob(
 #     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Low_filter_image/train.tfrecords')
@@ -27,7 +30,6 @@ logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_traj
 # filenames = glob.glob(
 #     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Band_filter_image/train.tfrecords')
 # logs_train_dir = '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/Band_filter_image'
-
 
 def read_and_decode(record):
     save_image_label_dict = {}
@@ -49,42 +51,57 @@ def read_and_decode(record):
     label_3 = tf.cast(label_3, tf.int32)  # change the label3 data type into int32
     return image, label_1, label_2, label_3
 
-
 # define placeholder
-input_x = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 360, 490, 3])
+input_x = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 360, 490, 3], name='images')
 # x_image = tf.reshape(input_x, [-1, 360, 490, 3])
-input_y1 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3])
-input_y2 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3])
-input_y3 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3])
+input_y1 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3], name='label1')
+input_y2 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3], name='label2')
+input_y3 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3], name='label3')
 
-train_conv_logit = CNN_structure.build_convolution_layer(input_x,BATCH_SIZE)
+train_conv_logit = CNN_structure.build_convolution_layer(input_x, BATCH_SIZE)
 train_evaluation = CNN_structure.evaluation(
-    train_conv_logit, input_y1, input_y2, input_y3,LEARNING_RATE)
+    train_conv_logit, input_y1, input_y2, input_y3, LEARNING_RATE)
 
 # read the data and get the data pipeline
 train_dataset = tf.data.TFRecordDataset(filenames)
 train_dataset = train_dataset.map(read_and_decode)
-train_dataset = train_dataset.apply(
-        tf.contrib.data.batch_and_drop_remainder(batch_size=BATCH_SIZE))
+train_dataset = train_dataset.batch(batch_size=BATCH_SIZE, drop_remainder=True)
 train_iter = train_dataset.make_one_shot_iterator()
 train_next_element = train_iter.get_next()
-
+merged = tf.summary.merge_all()
+saver = tf.train.Saver()
 init = tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
-    for step in range(TRAINING_STEP):
-        # get the dataset
-        image, label1, label2, label3 = sess.run(train_next_element)
-        tra_cost, tra_evaluation1, tra_evaluation2, tra_evaluation3, \
-        tra_accuracy = sess.run(train_evaluation,
-                                feed_dict={input_x:image,
-                                           input_y1:label1,
-                                           input_y2:label2,
-                                           input_y3:label3})
-        if step % 10 == 0:
-            print('train cost',np.around(tra_cost,3))
-            print('train evaluation1', np.around(tra_evaluation1, 3))
-            print('train evaluation2', np.around(tra_evaluation2, 3))
-            print('train evaluation3', np.around(tra_evaluation3, 3))
-            print('train accuracy', tra_accuracy)
+    train_writer = tf.summary.FileWriter(graph_path, sess.graph)
+    saver = tf.train.Saver()
+    count = 0
+    try:
+        for count in range(MAX_STEPS):
+            # get the dataset
+            image, label1, label2, label3 = sess.run(train_next_element)
+            tra_cost, tra_evaluation1, tra_evaluation2, tra_evaluation3, \
+            tra_accuracy = sess.run(train_evaluation,
+                                    feed_dict={input_x: image,
+                                               input_y1: label1,
+                                               input_y2: label2,
+                                               input_y3: label3})
+            if count % 5 == 0:
+                print('train cost', np.around(tra_cost, 3))
+                print('train evaluation1', np.around(tra_evaluation1, 3))
+                print('train evaluation2', np.around(tra_evaluation2, 3))
+                print('train evaluation3', np.around(tra_evaluation3, 3))
+                print('train accuracy', tra_accuracy)
+                summary = sess.run(merged, feed_dict={input_x: image,
+                                                      input_y1: label1,
+                                                      input_y2: label2,
+                                                      input_y3: label3})
+                train_writer.add_summary(summary, count)
+            if count % 10 == 0:
+                checkpoint_path = os.path.join(
+                    model_cnn_save_path, 'model.ckpt')
+                saver.save(sess, checkpoint_path, global_step=count)
 
+        train_writer.close()
+    except tf.errors.OutOfRangeError:
+        print("end!")
