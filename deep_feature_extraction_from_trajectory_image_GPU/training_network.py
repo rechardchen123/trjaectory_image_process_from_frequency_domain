@@ -8,6 +8,7 @@ import tensorflow as tf
 import numpy as np
 import CNN_structure
 import glob
+<<<<<<< HEAD
 import os
 
 BATCH_SIZE = 8
@@ -18,6 +19,15 @@ filenames = glob.glob(
 logs_train_dir = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/parameters'
 graph_path = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/graph'
 model_cnn_save_path = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/parameters/'
+=======
+
+BATCH_SIZE = 8
+LEARNING_RATE = 0.001
+filenames = glob.glob(
+    '/home/ucesxc0/Scratch/output/training_CNN_new_dataset/train.tfrecords')
+logs_train_dir = '/home/ucesxc0/Scratch/output/training_CNN_new_dataset'
+
+>>>>>>> a40f29ff73f50550e960666ab0d5b6d7a68f4117
 
 # filenames = glob.glob(
 #     '/home/ucesxc0/Scratch/output/deep_feature_extraction_from_trajectory_image/High_filter_image/train.tfrecords')
@@ -51,12 +61,22 @@ def read_and_decode(record):
     label_3 = tf.cast(label_3, tf.int32)  # change the label3 data type into int32
     return image, label_1, label_2, label_3
 
+<<<<<<< HEAD
 # define placeholder
 input_x = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 360, 490, 3], name='images')
 # x_image = tf.reshape(input_x, [-1, 360, 490, 3])
 input_y1 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3], name='label1')
 input_y2 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3], name='label2')
 input_y3 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3], name='label3')
+=======
+
+# define placeholder
+input_x = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 360, 490, 3])
+# x_image = tf.reshape(input_x, [-1, 360, 490, 3])
+input_y1 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3])
+input_y2 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3])
+input_y3 = tf.placeholder(dtype=tf.float32, shape=[BATCH_SIZE, 3])
+>>>>>>> a40f29ff73f50550e960666ab0d5b6d7a68f4117
 
 train_conv_logit = CNN_structure.build_convolution_layer(input_x, BATCH_SIZE)
 train_evaluation = CNN_structure.evaluation(
@@ -65,6 +85,7 @@ train_evaluation = CNN_structure.evaluation(
 # read the data and get the data pipeline
 train_dataset = tf.data.TFRecordDataset(filenames)
 train_dataset = train_dataset.map(read_and_decode)
+<<<<<<< HEAD
 train_dataset = train_dataset.batch(batch_size=BATCH_SIZE, drop_remainder=True)
 train_iter = train_dataset.make_one_shot_iterator()
 train_next_element = train_iter.get_next()
@@ -78,6 +99,19 @@ with tf.Session() as sess:
     count = 0
     try:
         for count in range(MAX_STEPS):
+=======
+train_dataset = train_dataset.batch(
+    batch_size=BATCH_SIZE, drop_remainder=True)
+train_iter = train_dataset.make_one_shot_iterator()
+train_next_element = train_iter.get_next()
+
+init = tf.global_variables_initializer()
+with tf.Session() as sess:
+    sess.run(init)
+    count = 0
+    try:
+        while True:
+>>>>>>> a40f29ff73f50550e960666ab0d5b6d7a68f4117
             # get the dataset
             image, label1, label2, label3 = sess.run(train_next_element)
             tra_cost, tra_evaluation1, tra_evaluation2, tra_evaluation3, \
@@ -92,6 +126,7 @@ with tf.Session() as sess:
                 print('train evaluation2', np.around(tra_evaluation2, 3))
                 print('train evaluation3', np.around(tra_evaluation3, 3))
                 print('train accuracy', tra_accuracy)
+<<<<<<< HEAD
                 summary = sess.run(merged, feed_dict={input_x: image,
                                                       input_y1: label1,
                                                       input_y2: label2,
@@ -105,3 +140,8 @@ with tf.Session() as sess:
         train_writer.close()
     except tf.errors.OutOfRangeError:
         print("end!")
+=======
+            count += 1
+    except tf.errors.OutOfRangeError:
+        print('end!')
+>>>>>>> a40f29ff73f50550e960666ab0d5b6d7a68f4117
